@@ -7,6 +7,7 @@
 	},
 	"elements": [
 		{
+			"name": "trunk",
 			"from": [1, 0, 1],
 			"to": [16, 10, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [9, 8, 9]},
