@@ -6,6 +6,7 @@ on:
        - published
 env:
   version: v1.1
+  mcversion: 1.18
 
 jobs:
   build:
@@ -23,7 +24,7 @@ jobs:
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          filename: "EBE-Models-OptimizedPack_${{ env.version }}.zip"
+          filename: "EBE-Models-OptimizedPack_${{ env.version }}-${{ env.mcversion }}.zip"
           exclusions: "*.git* *.yml"
       - name: Upload Release
         uses: AButler/upload-release-assets@v2.0
