@@ -6,8 +6,7 @@ on:
        - published
 env:
   version: v1.1
-  GITHUB_REF: ${{ github.ref }}
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +23,7 @@ jobs:
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          filename: "EBE-Models-OptimizedPack_${{ env.version }}-${GITHUB_REF#refs/heads/}.zip"
+          filename: "EBE-Models-OptimizedPack_${{ env.version }}-$(git symbolic-ref --short HEAD).zip"
           exclusions: "*.git* *.yml"
       - name: Upload Release
         uses: AButler/upload-release-assets@v2.0
