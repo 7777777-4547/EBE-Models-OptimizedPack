@@ -6,7 +6,7 @@ on:
        - published
 env:
   version: v1.1
-  mcversion: 1.20
+  mcversion: "1.20"
 
 jobs:
   build:
